@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kill the Cockroaches!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="start-screen">
+            <button id="start-btn" onclick="startGame()">Start Game</button>
+        </div>
+        <div class="header" style="display: none;">
+            <h1>Kill the Cockroaches!</h1>
+            <div class="stats">
+                <span id="timer">90 sec</span>
+                <span id="kills">0 kills</span>
+                <button id="mute-btn" onclick="toggleMute()">🔊</button>
+            </div>
+        </div>
+        <div id="game-area" class="game-area" style="display: none;"></div>
+        <div class="footer" style="display: none;">
+            <p>In 90 seconds, crush as many Cockroaches as you can. Enjoy!</p>
+        </div>
+    </div>
+
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p id="game-over-message"></p>
+            <button id="game-over-btn" onclick="restartGame()">OK</button>
+        </div>
+    </div>
+
+    <div id="speed-prompt-modal" class="modal">
+        <div class="modal-content speed-prompt">
+            <p id="speed-prompt-message"></p>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="kill-sound">
+        <source src="https://www.myinstants.com/media/sounds/splat.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
